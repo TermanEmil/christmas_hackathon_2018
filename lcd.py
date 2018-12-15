@@ -3,6 +3,7 @@ import time
 import board
 import digitalio
 import adafruit_character_lcd.character_lcd as characterlcd
+from sys import argv
 
 # Modify this if you have a different sized character LCD
 
@@ -25,4 +26,6 @@ def _lcd():
 
     return lcd
 lcd = _lcd()
-lcd.message = "Ho ho ho it's\n Christmas"
+
+# print(argv[1])
+lcd.message = argv[1]

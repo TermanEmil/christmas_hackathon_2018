@@ -53,6 +53,7 @@ def OnButtonDown():
             ids.add(update.message.chat_id)
             bot.send_chat_action(update.message.chat_id, 'upload_photo')
     GPIO.output(led_pin, GPIO.HIGH)  # led on
+    subprocess.call(["python3", "lcd.py", "proccessing..."])
     print("A picture is being taken...")
     time = dt_now()
     file_name = 'photos/guest{time:%Y%m%d_%H%M%S}.jpg'.format(time=time)
@@ -64,6 +65,7 @@ def OnButtonDown():
         bot.send_photo(chat_id=id, photo=open(file_name, 'rb'))
         # bot.send_message(chat_id=id, text="I'm sorry Dave I'm afraid I can't do that.")
 
+    subprocess.call(["python3", "lcd.py", "sent!!!"])
 
 def destroy():
     GPIO.output(led_pin, GPIO.LOW)   # led off
