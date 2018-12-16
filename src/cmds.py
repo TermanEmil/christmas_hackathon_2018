@@ -16,7 +16,7 @@ class CmdManager:
         self.update = update
 
     def process_update(self):
-        if not self.update.message.text:
+        if not self.update.message or not self.update.message.text:
             return
 
         cmd_name, *_ = self.update.message.text.partition(' ')
