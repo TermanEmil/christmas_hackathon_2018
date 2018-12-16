@@ -1,0 +1,2 @@
+rm photos/*;
+rm collages/*;
