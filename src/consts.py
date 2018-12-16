@@ -10,3 +10,6 @@ guest_texts = (
     "Deschide usa la prezentatorii al Mos Craciun!",
     "Ei au venit dupa tine?!"
 )
+
+add_frame = True
+frames_dir='/home/pi/img_frames/'
