@@ -26,4 +26,5 @@ def add_random_frame(img_path, output_path=None, frames_dir='./img_frames/'):
 
 	framed_img.save(output_path)
 
-# add_random_frame(sys.argv[1])
+if __name__ == '__main__':
+	add_random_frame(sys.argv[1], 'out.png')
